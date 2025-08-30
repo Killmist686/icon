@@ -36,7 +36,7 @@ function initGame(newStage = false) {
   board.innerHTML = "";
 
   document.getElementById("stageDisplay").textContent = `ステージ: ${stage}`;
-  document.getElementById("pairCount").textContent = `ツガイ: ${totalPairs}`;
+  document.getElementById("pairCount").textContent = `揃えたツガイ: ${totalPairs}`;
   document.getElementById("missCount").textContent = miss;
   document.getElementById("comboCount").textContent = `コンボ: ${combo}`;
 
@@ -93,7 +93,7 @@ function checkMatch() {
     stageFoundPairs++;
     totalPairs++;
     combo++;
-    document.getElementById("pairCount").textContent = `ツガイ: ${totalPairs}`;
+    document.getElementById("pairCount").textContent = `揃えたツガイ: ${totalPairs}`;
 
     if (combo % 3 === 0 && combo > 0 && miss > 0) {
       miss--;
@@ -175,3 +175,4 @@ document.getElementById("restartBtn").addEventListener("click", () => {
 
 // --- ページ読み込み時に開始 ---
 window.onload = () => initGame(false);
+
